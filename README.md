@@ -1,0 +1,1 @@
+System plugin redirects administrators after login.

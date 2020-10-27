@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_BFADMINLOGIN</name>
+    <version>1.0.0</version>
+    <creationDate>October 2020</creationDate>
+    <author>Jonathan Brain</author>
+    <authorEmail>brainforge@btinternet.com</authorEmail>
+    <authorUrl>http://www.brainforge.co.uk</authorUrl>
+    <copyright>(C) 2020 Jonathan Brain. All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>PLG_SYSTEM_BFADMINLOGIN_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="bfadminlogin">bfadminlogin.php</filename>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields
+				name="params"
+		>
+            <fieldset
+					name="basic"
+			>
+                <field
+                        name="favouriteurl"
+                        type="text"
+                        label="PLG_SYSTEM_BFADMINLOGIN_FAVOURITEURL_LABEL"
+                        description="PLG_SYSTEM_BFADMINLOGIN_FAVOURITEURL_DESC"
+                        hint="index.php?option=com_myfavourite"
+                        required="true"
+                        class="input-xxlarge"
+                />
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="PLG_SYSTEM_BFADMINLOGIN">
+            https://brainforge.co.uk/component/bfupdater?element=plg_system_bfadminlogin.xml
+        </server>
+    </updateservers>
+</extension>
