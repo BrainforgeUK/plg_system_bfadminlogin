@@ -36,6 +36,15 @@ class plgSystemBfadminlogin extends CMSPlugin {
 
 		if ($app->isClient('administrator'))
 		{
+			if (!preg_match('@/index.php$@', $_SERVER['HTTP_REFERER']))
+			{
+				return;
+			}
+			if (preg_match('@/administrator/*$@', $_SERVER['HTTP_REFERER']))
+			{
+				return;
+			}
+
 			$favouriteURL = trim($this->params->get('favouriteurl'));
 			if (!empty($favouriteURL))
 			{
